@@ -3,7 +3,7 @@
 Los contenedores se han realizado por medio de Docker compose, pero estos pueden ser adaptados al uso necesario.
 Para este ejemplo se adapta una versión de keycloak 15.0.1 conectado a una base de datos postgresql y el proceso se crea por dos formas, usando un volumen, y creando un contenedor con Dockerfile, cualquiera de las dos da un resultado similar.
 
-Generación por medio de un volumen.
+## Generación por medio de un volumen.
 
 Utilizar el archivo docker-compose en la carpeta volumen.
 Para este caso el contenedor se ha creado usando la imagen jboss/keycloak:15.0.1 y el cambio necesario es realizar un volumen donde se mapee la carpeta /cli/databases/postgres que contiene el archivo de configuración que se ha modificado para aceptar la nueva variable que contiene el String de conexión. Agregar el volumen de la siguiente forma: 
@@ -21,7 +21,7 @@ En la carpeta de configuración de postgresql debe existir el archivo “change-
 Para poder correr el docker-compose up debe de existir la carpeta ./cli/databases/postgres/ con todo su contenido.
 
 
-Por medio de Dokerfile.
+## Generación por medio de Dokerfile.
 
 
 Utilizar el archivo docker-compose en la carpeta dockerfile.
