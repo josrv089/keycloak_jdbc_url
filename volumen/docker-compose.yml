@@ -4,8 +4,8 @@ version: '3.8'
 
 services:
   keycloak:
-    container_name: jo2keycloak15
-    image: jotacr/keycloak15:0.0.1
+    container_name: keycloak15_v2
+    image: jboss/keycloak:15.0.1
     environment:
       DB_VENDOR: postgres
       DB_ADDR: postgrespr
@@ -13,8 +13,8 @@ services:
       DB_DATABASE: dbapp
       DB_SCHEMA: db_keycloak
       DB_USER: postgres
-      DB_PASSWORD: Perro0Bejero92
-      JDBC_URL: jdbc:postgresql://database-test-1.c1wjwjzwhjhe.us-east-2.rds.amazonaws.com:5432/dbapp   # jdbc:postgresql://postgrespr/keycloak
+      DB_PASSWORD: pass
+      JDBC_URL: jdbc:postgresql://database-test-1.c1wjwjzwhjhe.us-east-2.rds.amazonaws.com:5432/dbapp   #  # Para este ejemplo se está conectando a una bd en aws
     ports:
       - '9090:8080'
     networks:
